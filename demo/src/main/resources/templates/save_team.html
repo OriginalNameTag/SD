@@ -1,0 +1,11 @@
+<form th:action= "@{/adminPage}" method="get">
+
+<h1>Registered Team</h1>
+<div class="my-3">
+    <p>
+        <b>Team Name: </b><span th:text="${team.name}"></span><br>
+        <b>Image: </b><span th:text="${team.image}"></span>
+    </p>
+</div>  
+   <button type="submit">Return</button>
+</form>

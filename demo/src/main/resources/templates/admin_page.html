@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Admin Home Page</h1>
+    <p th:text="'Welcome back'"/>
+</body>
+
+<div>
+    <form th:action="@{/registerUser}">
+        <button>Register User</button>
+    </form>
+</div>
+<div>
+    <form th:action="@{/createTeam}">
+        <button>Create Team</button>
+    </form>
+</div>
+<div>
+    <form th:action="@{/createPlayer}">
+        <button>Create Player</button>
+    </form>
+</div>
+<div>
+    <form th:action="@{/createGame}">
+        <button>Create Game</button>
+    </form>
+</div>

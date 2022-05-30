@@ -1,0 +1,13 @@
+<form th:action= "@{/adminPage}" method="get">
+
+<h1>Registered User</h1>
+<div class="my-3">
+    <p>
+        <b>User Name: </b><span th:text="${user.name}"></span><br>
+        <b>Email: </b><span th:text="${user.email}"></span><br>
+        <b>Phone: </b><span th:text="${user.phone}"></span>
+    </p>
+</div>  
+   <button type="submit">Return</button>
+</form>
+

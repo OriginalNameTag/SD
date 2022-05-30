@@ -1,0 +1,16 @@
+<form th:action="@{/saveTeam}" th:object="${team}" method="post">
+    <h1>Create Team</h1>
+    <div class = "container">
+        <div>
+            <label for="name"><b>TeamName</b></label>
+            <input type="text" placeholder="TeamName" name="name" required>
+          </div>
+        <div>
+            <label for="image"><b>Image</b></label>
+            <input type="text" placeholder="Image" name="image" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>

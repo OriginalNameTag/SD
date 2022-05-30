@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>ScoreDei: Live Sport Results</h1>
+    <p th:text="'Welcome to ScoreDei'"/>
+</body>
+<div>
+    <form th:action="@{/login}">
+        <button>Login</button>
+    </form>
+</div>
+<div>
+    <form th:action="@{/games}">
+        <button>See on-going Games</button>
+    </form>
+</div>
+<div>
+    <form  th:action="@{/statistics}">
+        <button>Consult Statistics</button>
+    </form>
+</div>
