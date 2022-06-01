@@ -30,6 +30,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @RestController
 @RequestMapping("rest")
 public class RESTcontroller {
-   
+
    
 }

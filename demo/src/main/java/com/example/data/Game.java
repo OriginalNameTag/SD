@@ -28,6 +28,10 @@ public class Game {
     private Timestamp gameDate;
     @Column(nullable = false)
     private String location;
+    @Column(nullable = false)
+    private String winner;
+    @Column(nullable = false)
+    private String loser;
     @ManyToMany()
     private List<Team> teams;
 
@@ -45,7 +49,12 @@ public class Game {
     public void setId(int id){
         this.id = id;
     }
-    
+
+    public String getWinner() {return this.winner;}
+    public void setWinner(String team) { this.winner = winner;}
+    public String getLoser() {return this.loser;}
+    public void setLoser(String team) { this.loser = loser;}
+
     public Timestamp getGameDate(){
         return this.gameDate;
     }

@@ -45,26 +45,25 @@ public class DataController {
     }
     
     @PostMapping("/greeting")
-    public String greeting(@ModelAttribute Login login, Model model){
+    public String greeting(@ModelAttribute Login login, Model model) {
         String email = login.getEmail();
         String password = login.getPassword();
 
         User user = this.userService.getUser(email, password);
-        
-        
+
         if (user == null)
             return "landing";
 
         String name = user.getName();
         model.addAttribute("name", name);
-        
-        if (user.getAdmin()){
+
+        if (user.getAdmin()) {
             return "admin_page";
-        }
-        else if(!user.getAdmin())
+        } else {
             return "user_page";
+        }
         
-        return "landing";
+        //return "landing";
     }
 
     @GetMapping("/adminPage")
