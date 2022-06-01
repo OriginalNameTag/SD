@@ -38,5 +38,37 @@ public class Event {
 
     public Event(Integer type, Timestamp eventTime){
 
+        switch(type){
+            //Inicio e Fim (Separar?)
+            case 0:
+                //Inicio: Mostrar tempo, equipas
+                //Fim: mostrar resultado, tempo
+                break;
+            //Golo
+            case 1:
+                //Adicionar golo ao jogador
+                //Adicionar golo ao resultado
+                //Mostrar jogador, equipa e tempo do golo
+                break;
+            //Cartao Amarelo
+            case 2:
+                //Mostrar nome do jogador, tempo
+                break;
+            //Cartao Vermelho
+            case 3:
+                //Mostrar nome do jogador, tempo
+                break;
+            //Jogo Interrompido
+            case 4:
+                //Mostrar tempo
+                break;
+            //Jogo Resumido
+            case 5:
+                //Mostrar tempo
+                break;
+            default:
+                break;
+        }
+
     }
 }
