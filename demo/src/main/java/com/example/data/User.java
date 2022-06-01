@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 //import javax.persistence.ManyToMany;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @XmlRootElement
@@ -31,11 +34,29 @@ public class User {
     public User(){}
 
     public User(String name, String password, String email, Integer phone, Boolean admin){
-        setName(name);
-        setPassword(password);
-        setEmail(email);
-        setPhone(phone);
-        setAdmin(admin);
+        int used = 0;
+        List<User>currentUsers = new ArrayList<>();
+        for(User user: currentUsers){
+            if(Objects.equals(user.getName(), name)) {
+                //Nome ja utilizado
+                used++;
+            }
+            if(Objects.equals(email, user.getEmail())){
+                //Email ja utilizado
+                used++;
+            }
+            if(phone == user.getPhone()){
+                //Numero ja utilizado
+                used++;
+            }
+        }
+        if(used == 0) {
+            setName(name);
+            setPassword(password);
+            setEmail(email);
+            setPhone(phone);
+            setAdmin(admin);
+        }
     }
 
     public int getUserID(){

@@ -1,0 +1,20 @@
+#TODO
+validaçoes de segurança
+
+#ADMIN
+gerir equipas
+gerir jogadores
+criar/gerir jogos
+
+#Users Resgistados
+registar evento - cada evento vai ser um type int
+
+#Users nao registados
+acompanhar jogo -ver jogos que começam e mostrar-los na pagina
+estatisticas
+
+#football api
+exportar info using restcontroller
+
+
+
